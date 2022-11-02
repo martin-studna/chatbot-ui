@@ -2,7 +2,7 @@
 <br />
 <p align="center" style="margin: 0">
   <a href="https://github.com/martin-studna/chatbot">
-    <img src="./client/assets/bowler_hat2.png" alt="Logo" width="160" height="160">
+    <img src="./frontend/assets/bowler_hat2.png" alt="Logo" width="160" height="160">
   </a>
 
   <h3 align="center" style="font-size: 28px; margin: 0; padding-top: 0">Alfred</h3>
