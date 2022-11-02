@@ -1,0 +1,334 @@
+.chatbot__header {
+  border-radius: inherit;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 1em;
+  padding: 0.6em;
+  padding-left: 5px;
+  background: white;
+  font-size: var(--WatsonAssistantChat-CHAT-HEADER-font-size);
+  position: relative;
+  border-bottom: 0.05rem solid #ccc;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.chatbot__header-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--main-color);
+  border-radius: 20rem;
+  height: 2.5rem;
+  -webkit-box-shadow: var(--WatsonAssistantChat-BASE-box-shadow);
+  -moz-box-shadow: var(--WatsonAssistantChat-BASE-box-shadow);
+  box-shadow: var(--WatsonAssistantChat-BASE-box-shadow);
+  width: 2.5rem;
+  margin-right: 0.5rem;
+  text-align: center;
+}
+
+.chatbot__header-assistant {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.chatbot__header-title {
+  font-size: var(--header-title-font-size);
+  font-weight: var(--header-title-font-weight);
+  line-height: var(--WatsonAssistantChat-CHAT-HEADER-line-height);
+  color: inherit;
+  font-weight: 500;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.chatbot__header-minim-button {
+  display: flex;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  padding-bottom: 13px;
+  background: transparent;
+  border-radius: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+
+.chatbot__header-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.chatbot__header-info-button {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 4px;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: none;
+  outline: none;
+  box-shadow: 1px 0 4px hsla(0,0%,9%,0.3);
+  margin-right: 0.5rem;
+  color: #5e5e5e;
+}
+
+/* .chatbot-header-reset-button:hover {
+  background: var(--main-color);
+} */
+
+.chatbot__header-info-button .tooltip-text {
+  position: absolute;
+  bottom: 55px;
+  opacity: 0;
+  transition: opacity .4s;
+  width: 120px;
+  background-color: var(--main-color);
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.chatbot__header-info-button:hover .tooltip-text {
+  opacity: 1;
+}
+
+/* Tooltip arrow */
+.chatbot__header-info-button .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--main-color) transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.chatbot__header-info-button:hover .tooltip__text {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.chatbot__header-info-button .tooltip__text {
+  position: absolute;
+  bottom: 55px;
+  visibility: hidden;
+  width: 120px;
+  background-color: var(--main-color);
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+
+.chatbot__header-reset-button {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 4px;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: none;
+  outline: none;
+  box-shadow: 1px 0 4px hsla(0,0%,9%,0.3);
+  margin-right: 0.5rem;
+  color: #5e5e5e;
+}
+
+/* .chatbot-header-reset-button:hover {
+  background: var(--main-color);
+} */
+
+.chatbot__header-reset-button .tooltip__text {
+  position: absolute;
+  bottom: 55px;
+  opacity: 0;
+  transition: opacity .4s;
+  width: 120px;
+  background-color: var(--main-color);
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.chatbot__header-reset-button:hover .tooltip__text {
+  opacity: 1;
+}
+
+/* Tooltip arrow */
+.chatbot__header-reset-button .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--main-color) transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.chatbot__header-reset-button:hover .tooltip__text {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.chatbot__header-reset-button .tooltip__text {
+  position: absolute;
+  bottom: 55px;
+  visibility: hidden;
+  width: 120px;
+  background-color: var(--main-color);
+  color: white;
+  text-align: center;
+
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.login-button:hover .tooltip__text {
+  opacity: 1;
+}
+
+/* Tooltip arrow */
+.login-button .tooltip__text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--main-color) transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.login-button:hover .tooltip__text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.login-button .tooltip__text {
+  position: absolute;
+  bottom: 55px;
+  opacity: 0;
+  transition: opacity .4s;
+  width: 100px;
+  background-color: var(--main-color);
+  color: white;
+  font-size: var(--font-size);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.chatbot__header-minim-button:hover .tooltip__text {
+  opacity: 1;
+}
+
+/* Tooltip arrow */
+.chatbot__header-minim-button .tooltip__text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--main-color) transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.chatbot__header-minim-button:hover .tooltip__text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.chatbot__header-minim-button .tooltip__text {
+  position: absolute;
+  bottom: 55px;
+  opacity: 0;
+  transition: opacity .4s;
+  width: 100px;
+  background-color: var(--main-color);
+  color: white;
+  font-size: var(--font-size);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+  z-index: 1;
+}
+
+.login-button {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 4px;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: none;
+  outline: none;
+  box-shadow: 1px 0 4px hsla(0,0%,9%,0.3);
+  margin-right: 0.5rem;
+  color: #5e5e5e;
+}
+
+/* .login-button:hover {
+  background: var(--main-color);
+} */
+
+.minimize-image {
+  width: 20px; 
+  height: 20px; 
+}
+
+
+@media(max-width: 768px) {
+  * .tooltip__text {
+    display: none;
+  }
+}

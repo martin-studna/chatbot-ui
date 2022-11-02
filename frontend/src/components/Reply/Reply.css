@@ -1,0 +1,44 @@
+.bot-message__text {
+  background: #ebebeb ;
+  padding: 9px 12px;
+  border-radius: 8px;
+  margin-bottom: 0.7rem;
+  white-space: pre-wrap;
+}
+
+.bot-message__text_with_feedback {
+  position: relative;
+}
+
+.space_increasing {
+  height: 10px;
+  animation: heightI .3s;
+  -webkit-animation: heightI .3s;
+  -moz-animation: heightI .3s;
+  -o-animation: heightI .3s;
+}
+
+@keyframes heightI {
+  from {
+      height: 0px;
+  }
+  to {
+      height: 10px;
+  }
+}
+.space_decreasing {
+  height: 0px;
+  animation: heightD .3s;
+  -webkit-animation: heightD .3s;
+  -moz-animation: heightD .3s;
+  -o-animation: heightD .3s;
+}
+
+@keyframes heightD {
+  from {
+      height: 10px;
+  }
+  to {
+      height: 0px;
+  }
+}

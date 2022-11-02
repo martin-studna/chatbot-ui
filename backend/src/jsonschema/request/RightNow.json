@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "title": "RightNowRequest",
+  "description": "Request of the ServiceNow Conversation Service",
+  "type": "object",
+
+  "properties": {
+    "action": {
+      "type": "string",
+      "enum": ["getInc", "createInc"],
+      "title": "Operation to be executed",
+      "description": "Supported operations: getInc - return all incidents or the incident specified in INCnumber"
+    },
+    "INCnumber": {
+      "type": ["string", "null"],
+      "title": "Incident number"
+    },
+    "INCdesc": {
+      "type": ["string", "null"],
+      "title": "Description"
+    },
+    "INCtype": {
+      "type": ["string", "null"],
+      "title": "Type"
+    },
+    "INCassGr": {
+      "type": ["string", "null"],
+      "title": "Group"
+    },
+    "INCstate": {
+      "type": ["string", "null"],
+      "title": "State"
+    },
+    "INCconItem": {
+      "type": ["string", "null"],
+      "title": "Configuration item"
+    },
+    "INCpriority": {
+      "type": ["string", "null"],
+      "title": "Priority"
+    },
+    "INCshortDes": {
+      "type": ["string", "null"],
+      "title": "Short description"
+    },
+    "INCcloseNote": {
+      "type": ["string", "null"],
+      "title": "Close note"
+    }
+  },
+  "required": ["action"]
+}

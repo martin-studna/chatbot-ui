@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "title": "HelloWorldRequest",
+  "description": "Request of the HelloWorld Conversation Service",
+  "type": "object",
+
+  "properties": {
+    "lang": {
+      "type": "string",
+      "enum": ["cz", "en"],
+      "title": "Response language",
+      "description": "Currently we support greentings in Czech (cz) and English (en)"
+    },
+    "capitalize": {
+      "type": "boolean",
+      "title": "Whether the response sholud be capitalized"
+    }
+  },
+  "required": ["lang"]
+}

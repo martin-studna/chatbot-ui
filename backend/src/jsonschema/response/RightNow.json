@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "title": "RightNowResponse",
+  "description": "Response of the ServiceNow Conversation Service",
+  "type": "object",
+
+  "properties": {
+    "code": {
+      "type": "string",
+      "title": "Response code"
+    },
+    "result": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "object",
+          "properties": {
+            "caller_id.name": {
+              "type": "string",
+              "title": "Name of the caller"
+            },
+            "incident_state": {
+              "type": "string",
+              "title": "State"
+            },
+            "link": {
+              "type": "string",
+              "title": "Detail URL pointing to RightNow"
+            },
+            "number": {
+              "type": "string",
+              "title": "Incident number"
+            },
+            "short_description": {
+              "type": "string",
+              "title": "Short description"
+            },
+            "sys_updated_on": {
+              "type": "string",
+              "title": "Last modification date"
+            },
+            "sys_id": {
+              "type": "string",
+              "title": "System id"
+            }
+          }
+        }
+      }
+    },
+    "INCnumber": {
+      "type": "string",
+      "title": "Incident number"
+    },
+    "INCdesc": {
+      "type": "string",
+      "title": "Description"
+    },
+    "INCtype": {
+      "type": "string",
+      "title": "Type"
+    },
+    "INCassGr": {
+      "type": "string",
+      "title": "Group"
+    },
+    "INCstate": {
+      "type": "string",
+      "title": "State"
+    },
+    "INCconItem": {
+      "type": "string",
+      "title": "Configuration item"
+    },
+    "INCpriority": {
+      "type": "string",
+      "title": "Priority"
+    },
+    "INCshortDes": {
+      "type": "string",
+      "title": "Short description"
+    },
+    "INCcloseNote": {
+      "type": "string",
+      "title": "Close note"
+    }
+  }
+}

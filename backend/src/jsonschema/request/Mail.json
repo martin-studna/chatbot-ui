@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "title": "MailRequest",
+  "description": "Request of the Mail Conversation Service",
+  "type": "object",
+  "properties": {
+    "email_address": {
+      "type": "string",
+      "title": "Comma separated list of recipients (e-mail addresses)"
+    },
+    "subject": {
+      "type": "string",
+      "title": "E-mail subject"
+    },
+    "text": {
+      "type": "string",
+      "title": "E-mail text in HTML format"
+    }
+  }
+}

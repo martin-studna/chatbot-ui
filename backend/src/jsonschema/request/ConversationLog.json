@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "title": "ConversationLogRequest",
+  "description": "Request of the ConversationLog Conversation Service",
+  "type": "object",
+  "properties": {
+    "botname": {
+      "type": "string",
+      "title": "Name of the virtual assisant"
+    },
+    "filter": {
+      "type": "string",
+      "title": "Filter applied to search the conversation",
+      "description": "Example of a value: request.context.conversation_id:CONVERSATION_ID"
+    },
+    "log_format": {
+      "type": "string",
+      "enum": ["html", "text"],
+      "title": "Format of the log (html or a plain text)"
+    },
+    "page_limit": {
+      "type": "number",
+      "title": "Limit for the number of records returned"
+    },
+    "sort": {
+      "type": "string",
+      "title": "Field for sorting",
+      "description": "Value example: request_timestamp"
+    },
+    "conversation_starting": {
+      "type": "string",
+      "title": "Text prepended to the log as a welcome message"
+    },
+    "conversation_ending": {
+      "type": "string",
+      "title": "Text appended after the end of the log"
+    }
+  }
+}

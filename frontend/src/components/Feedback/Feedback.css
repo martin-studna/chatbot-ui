@@ -1,0 +1,98 @@
+  .chatbot-feedback {
+    display:flex;
+    flex-direction:row;
+    justify-content: flex-end;
+    background: white !important;
+    z-index: 1;
+    padding: 1px;
+  }
+  
+  .chatbot-feedback-thumb{
+    padding: 3px;
+  }
+  
+  
+  .chatbot-feedback-circleBase { 
+    position: absolute;
+    bottom: -12px;
+    right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    background: rgb(200, 54, 54, 0);
+    z-index: 1;
+    animation: fade .3s;
+    -webkit-animation: fade .3s;
+    -moz-animation: fade .3s;
+    -o-animation: fade .3s;
+  }
+  
+  @keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+
+  .chatbot-feedback-circle-up{  
+    height: 20px;
+    width: 20px;
+    margin: 1px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 0 4px hsla(0,0%,9%,0.3);
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .chatbot-feedback-circle-down{  
+    height: 20px;
+    width: 20px;
+    margin: 1px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 0 4px hsla(0,0%,9%,0.3);
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  
+  @keyframes feedback-hover-up {
+    16.65% {transform: translateY(-8px);}
+    33.3% {transform: translateY(6px);}
+    49.95% {transform: translateY(-4px);}
+    66.6% {transform: translateY(2px);}
+    83.25% {transform: translateY(-1px);}
+    100% {transform: translateY(0);}
+  }
+  
+  .chatbot-feedback-circle-up:hover, .chatbot-feedback-circle-up:focus {
+    animation-name: feedback-hover-up;
+    animation-duration: 0.7s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes feedback-hover-down {
+    16.65% {transform: translateY(8px);}
+    33.3% {transform: translateY(-6px);}
+    49.95% {transform: translateY(4px);}
+    66.6% {transform: translateY(-2px);}
+    83.25% {transform: translateY(1px);}
+    100% {transform: translateY(0);}
+  }
+  
+  .chatbot-feedback-circle-down:hover, .chatbot-feedback-circle-down:focus {
+    animation-name: feedback-hover-down;
+    animation-duration: 0.7s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+  }
+  
+  .chatbot-feedback-circle-up:active {
+    background-color: rgb(124, 155, 120);
+    transform: translateY(3px);
+  }
+  
+  .chatbot-feedback-circle-down:active {
+    background-color: rgb(168, 139, 139);
+    transform: translateY(3px);
+  }

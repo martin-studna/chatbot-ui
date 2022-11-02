@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "title": "ConversationLogResponse",
+  "description": "Response of the ConversationLog Conversation Service",
+  "type": "object",
+  "properties": {
+    "body": {
+      "type": "object",
+      "properties": {
+        "response": {
+          "type": "string",
+          "title": "Conversation log in the requested format"
+        }
+      }
+    },
+    "statusCode": {
+      "type": "number",
+      "title": "Reponse status"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+:root {
+    --main-color: black;
+    --main-color-darker: #595959;
+
+    --button-color: var(--main-color);
+    --button-color-hover: var(--main-color-darker);
+    --button-text-color: white;
+
+    --window-width: 375px;
+    --window-height: 660px;
+    --main-box-shadow: 1px 0 4px hsla(0,0%,9%,0.3);
+
+    --chatbot-distance-from-corner: 30px;
+
+    --font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+    --font-size: 14px;
+    --button-font-size: 13px;
+    --header-title-font-size: 16px;
+    --header-title-font-weight: 600;
+
+    --WatsonAssistantChat-BASE-box-shadow: 1px 0 4px hsla(0,0%,9%,0.3);
+    --WatsonAssistantChat-BASE-large-font-size: 16px;
+    --WatsonAssistantChat-CHAT-HEADER-font-weight: 600;
+    --WatsonAssistantChat-CHAT-HEADER-line-height: 20px;
+    --WatsonAssistantChat-THEME-link-01: #0f62fe;
+    --WatsonAssistantChat-BASE-box-shadow: 1px 0 4px hsla(0,0%,9%,0.3);
+    --WatsonAssistantChat-BASE-large-font-size: 16px;
+    --WatsonAssistantChat-BASE-spacing-01: 2px;
+    --WatsonAssistantChat-BASE-spacing-02: 4px;
+    --WatsonAssistantChat-BASE-spacing-03: 8px;
+    --WatsonAssistantChat-BASE-spacing-04: 12px;
+    --WatsonAssistantChat-BASE-spacing-05: 16px;
+    --WatsonAssistantChat-BASE-spacing-06: 24px;
+    --WatsonAssistantChat-BASE-spacing-07: 32px;
+    --WatsonAssistantChat-BASE-spacing-08: 40px;
+    --WatsonAssistantChat-BASE-spacing-09: 48px;
+    --WatsonAssistantChat-CHAT-HEADER-font-weight: 600;
+    --WatsonAssistantChat-CHAT-HEADER-line-height: 20px;
+    --WatsonAssistantChat-BASE-font-family: "IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
+    --WatsonAssistantChat-THEME-skeleton-01: #e5e5e5;
+    --WatsonAssistantChat-BASE-med-border-width: 2px;
+    --WatsonAssistantChat-CHAT-HEADER-font-size: var(--WatsonAssistantChat-BASE-large-font-size);
+    --WatsonAssistantChat-CARD-box-shadow: 0 2px 4px 0 var(--WatsonAssistantChat-THEME-skeleton-01);
+}

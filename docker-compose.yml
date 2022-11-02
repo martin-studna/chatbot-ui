@@ -1,0 +1,35 @@
+version: '3'
+services:
+  server:
+    build:
+      context: ./server
+    environment:
+      - assistant_url=
+      - assistant_username=apikey
+      - assistant_password=
+      - assistant_workspace_id=
+      - frontend_proxy=http://localhost:8080
+      - allow_origin="*"
+      - discovery_apikey=
+      - discovery_url=
+      - discovery_environment_id=
+      - discovery_collection_id=
+      - discovery_header="I searched my knowledge base and found this information which might be useful:"
+      - discovery_max_results=3
+    ports:
+      - '3023:3023'
+  client:
+    build:
+      context: ./client
+    environment: 
+      - VUE_APP_DROPDOWN=true
+      - VUE_APP_DROPDOWN_THRESHOLD=6
+      - VUE_APP_SERVER_URL=http://localhost:3023
+      - VUE_APP_AZURE_CLIENT_ID=
+      - VUE_APP_AZURE_TENANT_ID=
+      - VUE_APP_DEPLOY_SSO=button
+    ports:
+      - '8080:8080'
+    volumes:
+      - ~/.composer-docker/cache:/root/.composer/cache:delegated
+      - ./client:/usr/src/app:cached

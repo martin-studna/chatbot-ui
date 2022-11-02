@@ -1,0 +1,233 @@
+.chatbot-container,
+.chatbot-container *,
+.chatbot-container *::before,
+.chatbot-container *::after {
+    box-sizing: border-box;
+}
+
+
+.chatbot-container * {
+    color: black;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+}
+
+.chatbot-container a {
+    color: blue;
+}
+
+.chatbot-container b a {
+    color: blue;
+}
+
+.chatbot-container a:hover {
+    text-decoration: underline;
+}
+
+.chatbot-container b {
+    font-weight: 600;
+}
+
+.chatbot-container ul { 
+    list-style: initial;
+    margin: initial;
+    padding: 0 0 0 20px;
+ }
+ .chatbot-container ol {
+    list-style: decimal;
+    margin: initial;
+    padding: 0 0 0 20px;
+ }
+
+.chatbot-container li { 
+    display: list-item; 
+}
+
+.chatbot-container hr {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.chatbot {
+    position: fixed;
+    right: var(--chatbot-distance-from-corner);
+    bottom: var(--chatbot-distance-from-corner);
+    height: var(--window-height);
+    width: var(--window-width);
+    background: rgb(244, 244, 244);
+    border: 0.05rem solid #ccc;
+    box-shadow: var(--WatsonAssistantChat-BASE-box-shadow);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s ease;
+    border-radius: 7px;
+    z-index: 1001;
+}
+
+
+.bouncy {
+    animation: bounce 2s linear infinite !important;
+}
+
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    80%   { transform: translateY(0); }
+    90%  { transform: translateY(-0.5rem); }
+    100% { transform: translateY(0); }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.295);
+    z-index: 1000;
+}
+
+.hidden {
+    display: none;
+}
+
+.darken {
+    background-color: rgba(40, 35, 35, 0.605);
+}
+
+.chatbot-container .hvr-fade {
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -ms-transition-duration: 0.3s;
+    transition-property: color, background-color;
+    -webkit-transition-property: color, background-color;
+    -moz-transition-property: color, background-color;
+    -o-transition-property: color, background-color;
+    -ms-transition-property: color, background-color;
+}
+
+.fade-in-up {
+    animation-name: fade-in-up;
+    -webkit-animation-name: fade-in-up;
+    -moz-animation-name: fade-in-up;
+    -o-animation-name: fade-in-up;
+    -ms-animation-name: fade-in-up;
+}
+
+.fade-out-down {
+    animation-name: fade-out-down;
+    -webkit-animation-name: fade-out-down;
+    -moz-animation-name: fade-out-down;
+    -o-animation-name: fade-out-down;
+    -ms-animation-name: fade-out-down;
+}
+
+.animated {
+    animation-duration: 400ms;
+    -webkit-animation-duration: 400ms;
+    -moz-animation-duration: 400ms;
+    -o-animation-duration: 400ms;
+    -ms-animation-duration: 400ms;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+}
+
+.animated.faster {
+    animation-duration: 200ms;
+    -webkit-animation-duration: 200ms;
+    -moz-animation-duration: 200ms;
+    -o-animation-duration: 200ms;
+    -ms-animation-duration: 200ms;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-out-down {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: translate3d(0, 3%, 0);
+        -webkit-transform: translate3d(0, 3%, 0);
+        -moz-transform: translate3d(0, 3%, 0);
+        -o-transform: translate3d(0, 3%, 0);
+        -ms-transform: translate3d(0, 3%, 0);
+    }
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 5%, 0);
+        -webkit-transform: translate3d(0, 5%, 0);
+        -moz-transform: translate3d(0, 5%, 0);
+        -o-transform: translate3d(0, 5%, 0);
+        -ms-transform: translate3d(0, 5%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+    }
+}
+
+@media (max-width: 768px) {
+    .chatbot {
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .wave {
+        top: 30px;
+        right: 17rem;
+    }
+
+    .fade-in-up {
+        animation-name: fade-in;
+        -webkit-animation-name: fade-in;
+        -moz-animation-name: fade-in;
+        -o-animation-name: fade-in;
+        -ms-animation-name: fade-in;
+    }
+
+    .fade-out-down {
+        animation-name: fade-out;
+        -webkit-animation-name: fade-out;
+        -moz-animation-name: fade-out;
+        -o-animation-name: fade-out;
+        -ms-animation-name: fade-out;
+    }
+}

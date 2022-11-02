@@ -1,0 +1,35 @@
+.bot-message {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-right: 0.8rem;
+  margin-bottom: 0.4rem;
+  max-width: 97%;
+}
+
+.bot-message > div {
+  line-height: 1.4;
+}
+
+.bot-message__content {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.fade-message {
+  animation: fade .5s;
+  -webkit-animation: fade .5s;
+  -moz-animation: fade .5s;
+  -o-animation: fade .5s;
+
+}
+
+@keyframes fade {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}

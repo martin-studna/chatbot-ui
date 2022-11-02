@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "title": "MailResponse",
+  "description": "Response of the Mail Conversation Service",
+  "type": "object",
+  "properties": {
+    "body": {
+      "type": "object",
+      "properties": {
+        "response": {
+          "type": "string",
+          "title": "Some non-empty string to be ignored"
+        }
+      }
+    },
+    "statusCode": {
+      "type": "number",
+      "title": "Reponse status"
+    }
+  }
+}

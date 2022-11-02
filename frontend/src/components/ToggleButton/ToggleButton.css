@@ -1,0 +1,84 @@
+.chatbot__open-button-container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--WatsonAssistantChat-BASE-box-shadow);
+  right: var(--chatbot-distance-from-corner);
+  bottom: var(--chatbot-distance-from-corner);
+  height: var(--chatbot-button-size);
+  width: var(--chatbot-button-size);
+  border-radius: 50%;
+  background: white;
+  overflow: hidden;
+  width: 72px;
+  height: 72px;
+  -webkit-box-shadow: var(--WatsonAssistantChat-BASE-box-shadow);
+  -moz-box-shadow: var(--WatsonAssistantChat-BASE-box-shadow);
+  box-shadow: var(--WatsonAssistantChat-BASE-box-shadow);
+  z-index: 900;
+}
+
+.chatbot__open-button-container img {
+  width: 40px;
+  height: 40px;
+
+}
+
+.chatbot__open-button-inner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: visible;
+}
+
+.chatbot__open-button-container:hover {
+  background-color: var(--main-color-darker);
+  cursor: pointer;
+}
+
+.chatbot__open-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.chatbot__open-button:focus {
+  border: none;
+  outline: none;
+}
+
+.bouncy {
+  animation: bounce 1.5s ease-in-out infinite !important;
+  -webkit-animation: bounce 1.5s ease-in-out infinite !important;
+  -moz-animation: bounce 1.5s ease-in-out infinite !important;
+  -o-animation: bounce 1.5s ease-in-out infinite !important;
+}
+
+@keyframes bounce {
+  0%  { 
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+  }
+  65% {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+  }  
+  100% { 
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+   }
+}

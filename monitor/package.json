@@ -1,0 +1,39 @@
+{
+  "name": "chat-monitoring",
+  "version": "0.1.0",
+  "description": "Monitoring of chat applications",
+  "main": "monitoring.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha --unhandled-rejections=strict test.js",
+    "coverage": "node_modules/.bin/nyc --reporter=text-summary node_modules/.bin/mocha ./test.js && node_modules/.bin/nyc report",
+    "lint": "eslint --ext .js *.js",
+    "exec:print": "node -e \"require('dotenv').config(); main = require('./monitor.js'); main({ serverUrl: process.env.serverUrl, clientUrl: process.env.clientUrl, reportOnlyKO: false })\"",
+    "exec:mail": "node -e \"require('dotenv').config(); main = require('./monitor.js'); main({ serverUrl: process.env.serverUrl, clientUrl: process.env.clientUrl, reportOnlyKO: false, mail: process.env.notificationRecipient, mailSender: process.env.mailSender, smtpHost: process.env.smtpHost, smtpPort: process.env.smptPort, smtpUser: process.env.smtpUser, smtpPassword: process.env.smtpPassword });\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.ibm.com:AI-CoE-Prague/monitoring.git"
+  },
+  "keywords": [
+    "monitoring",
+    "chat"
+  ],
+  "author": "jan_nemecek@cz.ibm.com",
+  "license": "ISC",
+  "dependencies": {
+    "nodemailer": "^6.4.6"
+  },
+  "devDependencies": {
+    "airbnb": "0.0.2",
+    "babel-eslint": "^10.1.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-mocha": "^6.3.0",
+    "eslint-plugin-react": "^7.18.3",
+    "mocha": "^7.1.2",
+    "nyc": "^15.0.1"
+  }
+}
